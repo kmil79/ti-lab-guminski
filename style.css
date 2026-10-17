@@ -1,0 +1,8 @@
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu { display: flex; gap: 20px; }
+.menu a { text-decoration: none; }
+.menu a:hover { color: burlywood; }
