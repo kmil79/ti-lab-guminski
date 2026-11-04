@@ -1,8 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 20px;
+  max-width: 1100px;
+  margin-inline: auto;
+  color: #222;
+}
+
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e7eb;
 }
-.menu { display: flex; gap: 20px; }
-.menu a { text-decoration: none; }
-.menu a:hover { color: burlywood; }
+
+.logo {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #111827;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: #b45309;
+}
+
+section, footer {
+  padding: 32px 0;
+}
