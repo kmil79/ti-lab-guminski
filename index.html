@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Pracownia Rowerowa Szprycha</h1>
+    <header class="site-header">
+        <p class="logo">Pracownia Rowerowa Szprycha</p>
 
         <nav class="menu">
             <a href="#uslugi">Usługi</a>
@@ -20,6 +20,26 @@
     <main>
         <section id="uslugi">
             <h2>Nasze usługi</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Przegląd podstawowy</h3>
+                    <p>Regulacja hamulców i przerzutek, smarowanie łańcucha oraz kontrola ciśnienia.</p>
+                    <p class="card__price">od 120 zł</p>
+                </article>
+
+                <article class="card card--highlight">
+                    <span class="badge">Najczęściej wybierane</span>
+                    <h3>Przegląd generalny</h3>
+                    <p>Pełny serwis z rozebraniem napędu, myciem, wymianą smarów i centrowaniem kół.</p>
+                    <p class="card__price">od 250 zł</p>
+                </article>
+
+                <article class="card">
+                    <h3>Serwis kół i ogumienia</h3>
+                    <p>Centrowanie kół, wymiana dętek, opon oraz zaplatanie nowych szprych.</p>
+                    <p class="card__price">od 50 zł</p>
+                </article>
+            </div>
         </section>
 
         <section id="cennik">
