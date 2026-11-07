@@ -122,3 +122,16 @@ footer a {
     gap: 12px;
   }
 }
+
+.menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 12px;
+  }
+
+  
+  .menu.menu--open {
+    display: flex;
+  }
