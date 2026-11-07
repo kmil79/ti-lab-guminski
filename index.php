@@ -90,7 +90,7 @@ $rok = date('Y');
         <p>Adres: ul. Zielona 12, 85-123 Bydgoszcz</p>
         <p>Telefon: <a href="tel:+48123456789">123 456 789</a></p>
         <p>E-mail: <a href="mailto:kontakt@szprycha.pl">kontakt@szprycha.pl</a></p>
-        <p> &copy; <?=$rok ?> <?=$firma ?> </p>   
+        <p> &copy; <?=htmlspecialchars($rok) ?> <?=htmlspecialchars($firma) ?> </p>   
     </footer>
 </body>
 </html>
