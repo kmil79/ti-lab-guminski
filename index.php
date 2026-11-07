@@ -1,0 +1,96 @@
+<?php
+$firma = 'Szprycha';
+$rok = date('Y');
+?>
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pracownia Rowerowa Szprycha</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <p class="logo">Pracownia Rowerowa Szprycha</p>
+        <button class="menu-toggle" aria-expanded="false" aria-label="menu">
+            ☰
+        </button>
+        <nav class="menu">
+            <a href="#uslugi">Usługi</a>
+            <a href="#cennik">Cennik</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="uslugi">
+            <h2>Nasze usługi</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Przegląd podstawowy</h3>
+                    <p>Regulacja hamulców i przerzutek, smarowanie łańcucha oraz kontrola ciśnienia.</p>
+                    <p class="card__price">od 120 zł</p>
+                </article>
+
+                <article class="card card--highlight">
+                    <span class="badge">Najczęściej wybierane</span>
+                    <h3>Przegląd generalny</h3>
+                    <p>Pełny serwis z rozebraniem napędu, myciem, wymianą smarów i centrowaniem kół.</p>
+                    <p class="card__price">od 250 zł</p>
+                </article>
+
+                <article class="card">
+                    <h3>Serwis kół i ogumienia</h3>
+                    <p>Centrowanie kół, wymiana dętek, opon oraz zaplatanie nowych szprych.</p>
+                    <p class="card__price">od 50 zł</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="cennik">
+            <h2>Cennik</h2>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Usługa</th>
+                        <th class="num">Cena</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Przegląd podstawowy</td>
+                        <td class="num">120 zł</td>
+                    </tr>
+                    <tr>
+                        <td>Przegląd generalny</td>
+                        <td class="num">250 zł</td>
+                    </tr>
+                    <tr>
+                        <td>Regulacja przerzutek lub hamulców</td>
+                        <td class="num">45 zł</td>
+                    </tr>
+                    <tr>
+                        <td>Centrowanie koła</td>
+                        <td class="num">60 zł</td>
+                    </tr>
+                    <tr>
+                        <td>Wymiana dętki / opony</td>
+                        <td class="num">35 zł</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer id="kontakt">
+        <h2>Kontakt</h2>
+        <p>Adres: ul. Zielona 12, 85-123 Bydgoszcz</p>
+        <p>Telefon: <a href="tel:+48123456789">123 456 789</a></p>
+        <p>E-mail: <a href="mailto:kontakt@szprycha.pl">kontakt@szprycha.pl</a></p>
+        <p> &copy; <?=$rok ?> <?=$firma ?> </p>   
+    </footer>
+</body>
+</html>
