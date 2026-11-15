@@ -1,8 +1,9 @@
 <?php
+require 'baza.php';
 $firma = 'Szprycha';
 $rok = date('Y');
+$uslugi = $pdo->query('SELECT nazwa, cena FROM uslugi ORDER BY cena')->fetchAll();
 ?>
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -22,6 +23,7 @@ $rok = date('Y');
             <a href="#uslugi">Usługi</a>
             <a href="#cennik">Cennik</a>
             <a href="#kontakt">Kontakt</a>
+            <a href="login.php">Panel</a>
         </nav>
     </header>
 
@@ -60,26 +62,12 @@ $rok = date('Y');
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Przegląd podstawowy</td>
-                        <td class="num">120 zł</td>
-                    </tr>
-                    <tr>
-                        <td>Przegląd generalny</td>
-                        <td class="num">250 zł</td>
-                    </tr>
-                    <tr>
-                        <td>Regulacja przerzutek lub hamulców</td>
-                        <td class="num">45 zł</td>
-                    </tr>
-                    <tr>
-                        <td>Centrowanie koła</td>
-                        <td class="num">60 zł</td>
-                    </tr>
-                    <tr>
-                        <td>Wymiana dętki / opony</td>
-                        <td class="num">35 zł</td>
-                    </tr>
+                    <?php foreach ($uslugi as $usluga): ?>
+                        <tr>
+                            <td><?= htmlspecialchars($usluga['nazwa']) ?></td>
+                            <td class="num"><?= (int) $usluga['cena'] ?> zł</td>
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </section>
@@ -90,7 +78,7 @@ $rok = date('Y');
         <p>Adres: ul. Zielona 12, 85-123 Bydgoszcz</p>
         <p>Telefon: <a href="tel:+48123456789">123 456 789</a></p>
         <p>E-mail: <a href="mailto:kontakt@szprycha.pl">kontakt@szprycha.pl</a></p>
-        <p> &copy; <?=htmlspecialchars($rok) ?> <?=htmlspecialchars($firma) ?> </p>   
+        <p>&copy; <?= htmlspecialchars($rok) ?> <?= htmlspecialchars($firma) ?></p>   
     </footer>
 </body>
 </html>
